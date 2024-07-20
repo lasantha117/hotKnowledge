@@ -1,0 +1,25 @@
+[
+  {
+    "id": "1",
+    "title": "Educational Video Series For You",
+    "description": "HOT Wallet is a real blockchain project...",
+    "detailedDescription": "HOT Wallet is a real blockchain project. That's why we are launching a series of educating videos for those who are new to crypto 🎉.In our first video you will learn:\n➡️What is blockchain\n➡️How smart contracts work\n➡️How cryptocurrency is mined and works",
+
+    "image": "YoutubeAdd"
+  },
+  {
+    "id": "2",
+    "title": "Russian language is now available in HOT Wallet ",
+    "description": "You can switch the language in Settings...",
+    "detailedDescription": "You can switch the language in Settings → Language. If you notice inaccuracies in translations, please report them to our  chat or technical support ❤️",
+
+    "image": "RussianLanguage"
+  },
+  {
+    "id": "3",
+    "title": "Meet a new blockchain in HOT Wallet: BNB Chain",
+    "description": "Portfolios and Swaps for...",
+    "detailedDescription": "Portfolios and Swaps for the most popular tokens on the BNB are already available in HOT Wallet 🔥 \n🪙 BNB is one of the most popular blockchains and created by Binance, the world's largest cryptocurrency exchange.",
+    "image": "bnbChain"
+  }
+]
