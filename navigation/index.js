@@ -1,40 +1,50 @@
-// If you are not familiar with React Navigation, check out the "Fundamentals" guide:
-// https://reactnavigation.org/docs/getting-started
-import {
-  DarkTheme,
-  DefaultTheme,
-  NavigationContainer,
-} from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+// navigation/index.js
 
-import NotFoundScreen from "../screens/NotFoundScreen";
-import BottomTabNavigator from "./BottomTabNavigator";
-import LinkingConfiguration from "./LinkingConfiguration";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import CustomHeader from '../components/header/CustomHeader';
+import BottomTabNavigator from './BottomTabNavigator';
+import Quiz from '../components/quiz/quiz';
+import TelegramWebViewScreen from '../TelegramWebView/telegramWebViewScreen';
+import store from '../assets/redux/store';
 
-export default function Navigation({ colorScheme }) {
-  return (
-    <NavigationContainer
-      linking={LinkingConfiguration}
-      theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
-    >
-      <RootNavigator />
-    </NavigationContainer>
-  );
-}
-
-// A root stack navigator is often used for displaying modals on top of all other content
-// Read more here: https://reactnavigation.org/docs/modal
 const Stack = createStackNavigator();
 
-function RootNavigator() {
+const linking = {
+  prefixes: ['http://localhost:8081'],
+  config: {
+    screens: {
+      BottomTabs: 'bottom',
+      Quiz: 'quiz',
+      TelegramWebView: 'telegram', // Add the new screen to the linking configuration
+    },
+  },
+};
+
+const Navigation = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
-      <Stack.Screen
-        name="NotFound"
-        component={NotFoundScreen}
-        options={{ title: "Oops!" }}
-      />
-    </Stack.Navigator>
+    <NavigationContainer linking={linking}>
+      <Stack.Navigator
+        screenOptions={{
+          header: (props) => <CustomHeader {...props} />,
+        }}
+      >
+        <Stack.Screen name="BottomTabs" component={BottomTabNavigator} />
+        <Stack.Screen name="Quiz" component={Quiz} />
+        <Stack.Screen name="TelegramWebView" component={TelegramWebViewScreen} /> 
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
+
+const App = () => {
+  return (
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
+  );
+};
+
+export default App;

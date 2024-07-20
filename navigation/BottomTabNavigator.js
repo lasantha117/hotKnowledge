@@ -1,80 +1,57 @@
-// Learn more about createBottomTabNavigator:
-// https://reactnavigation.org/docs/bottom-tab-navigator
-import Ionicons from "@expo/vector-icons/Ionicons";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
-import { useColorScheme } from "react-native";
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useColorScheme } from 'react-native';
+import { RiHomeLine, RiDashboardLine, RiExchangeLine, RiGroupLine } from '@remixicon/react';
+import store from '../assets/redux/store';
+import Home from '../components/home/home';
+import Dashboard from '../components/dashbord';
+import SwapPage from '../components/swapPage/swapPage';
+import Friends from '../components/Friends/friends';
+import Colors from '../constants/Colors';
+import styles from './bottomNavStyles';
+import News from '../components/News';
+import { Provider } from 'react-redux';
 
-import Colors from "../constants/Colors";
-import TabOneScreen from "../screens/TabOneScreen";
-import TabTwoScreen from "../screens/TabTwoScreen";
 
 const BottomTab = createBottomTabNavigator();
 
-export default function BottomTabNavigator() {
+const BottomTabNavigator = () => {
   const colorScheme = useColorScheme();
 
   return (
-    <BottomTab.Navigator
-      initialRouteName="TabOne"
-      screenOptions={{ tabBarActiveTintColor: Colors[colorScheme].tint }}
-    >
-      <BottomTab.Screen
-        name="TabOne"
-        component={TabOneNavigator}
-        options={{
+    <Provider store={store}> {/* Wrap the navigator with the Provider */}
+      <BottomTab.Navigator
+        initialRouteName="Home"
+        screenOptions={({ route }) => ({
+          tabBarActiveTintColor: Colors[colorScheme].tint,
+          tabBarStyle: styles.tabBarContainer,
+          tabBarIcon: ({ color, size }) => {
+            let IconComponent;
+
+            if (route.name === 'Home') {
+              IconComponent = RiHomeLine;
+            } else if (route.name === 'Dashboard') {
+              IconComponent = RiDashboardLine;
+            } else if (route.name === 'SwapPage') {
+              IconComponent = RiExchangeLine;
+            } else if (route.name === 'Friends') {
+              IconComponent = RiGroupLine;
+            } else if (route.name === 'News') {
+              IconComponent = RiGroupLine;
+            }
+
+            return <IconComponent size={size} color={color} style={styles.tabBarIcon} />;
+          },
           headerShown: false,
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
-          ),
-        }}
-      />
-      <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
-          ),
-        }}
-      />
-    </BottomTab.Navigator>
+        })}
+      >
+        <BottomTab.Screen name="Home" component={Home} />
+        <BottomTab.Screen name="Dashboard" component={Dashboard} />
+        <BottomTab.Screen name="SwapPage" component={SwapPage} />
+        <BottomTab.Screen name="Friends" component={Friends} />
+        <BottomTab.Screen name="News" component={News} />
+      </BottomTab.Navigator>
+    </Provider>
   );
-}
-
-// You can explore the built-in icon families and icons on the web at:
-// https://icons.expo.fyi/
-function TabBarIcon(props) {
-  return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
-}
-
-// Each tab has its own navigation stack, you can read more about this pattern here:
-// https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator();
-
-function TabOneNavigator() {
-  return (
-    <TabOneStack.Navigator>
-      <TabOneStack.Screen
-        name="TabOneScreen"
-        component={TabOneScreen}
-        options={{ headerTitle: "Tab One Title" }}
-      />
-    </TabOneStack.Navigator>
-  );
-}
-
-const TabTwoStack = createStackNavigator();
-
-function TabTwoNavigator() {
-  return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: "Tab Two Title" }}
-      />
-    </TabTwoStack.Navigator>
-  );
-}
+};
+export default BottomTabNavigator;
