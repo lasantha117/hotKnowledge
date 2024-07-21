@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-
+import TelegramWebView from './telegramWebView';
 
 const TelegramWebViewScreen = () => {
   return (
