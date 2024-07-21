@@ -3,14 +3,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import CustomHeader from '../components/header/CustomHeader';
-import BottomTabNavigator from './BottomTabNavigator';
-import Quiz from '../components/quiz/quiz';
-import TelegramWebViewScreen from '../TelegramWebView/telegramWebViewScreen';
-import store from '../assets/redux/store';
 
-const Stack = createStackNavigator();
+import BottomTabNavigator from './BottomTabNavigator';
+import store from '../assets/redux/store';
 
 const linking = {
   prefixes: ['http://localhost:8081'],
@@ -18,7 +13,7 @@ const linking = {
     screens: {
       BottomTabs: 'bottom',
       Quiz: 'quiz',
-      TelegramWebViewScreen : 'telegram', // Add the new screen to the linking configuration
+      TelegramWebViewScreen: 'telegram',
     },
   },
 };
@@ -26,15 +21,7 @@ const linking = {
 const Navigation = () => {
   return (
     <NavigationContainer linking={linking}>
-      <Stack.Navigator
-        screenOptions={{
-          header: (props) => <CustomHeader {...props} />,
-        }}
-      >
-        <Stack.Screen name="BottomTabs" component={BottomTabNavigator} />
-        <Stack.Screen name="Quiz" component={Quiz} />
-        <Stack.Screen name="TelegramWebView" component={TelegramWebViewScreen} /> 
-      </Stack.Navigator>
+      <BottomTabNavigator />
     </NavigationContainer>
   );
 };

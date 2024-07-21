@@ -1,3 +1,5 @@
+// navigation/BottomTabNavigator.js
+
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useColorScheme } from 'react-native';
@@ -11,7 +13,6 @@ import Colors from '../constants/Colors';
 import styles from './bottomNavStyles';
 import News from '../components/News';
 import { Provider } from 'react-redux';
-
 
 const BottomTab = createBottomTabNavigator();
 
@@ -42,7 +43,7 @@ const BottomTabNavigator = () => {
 
             return <IconComponent size={size} color={color} style={styles.tabBarIcon} />;
           },
-          headerShown: false,
+          headerShown: false, // Ensure the header is not shown
         })}
       >
         <BottomTab.Screen name="Home" component={Home} />
@@ -54,4 +55,5 @@ const BottomTabNavigator = () => {
     </Provider>
   );
 };
+
 export default BottomTabNavigator;
