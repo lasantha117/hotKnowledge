@@ -18,7 +18,7 @@ const linking = {
     screens: {
       BottomTabs: 'bottom',
       Quiz: 'quiz',
-      TelegramWebView: 'telegram', // Add the new screen to the linking configuration
+      TelegramWebViewScreen : 'telegram', // Add the new screen to the linking configuration
     },
   },
 };
