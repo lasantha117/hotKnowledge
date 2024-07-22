@@ -1,24 +1,23 @@
 {
     "Week1": [
         {
-            "question": "What is the primary purpose of the NEAR Protocol?",
+            "question": "Which Token added to the hot wallet most recently?",
             "answers": [
-                "Decentralized finance",
-                "File storage",
-                "Smart contract platform",
-                "Supply chain management"
+                "DD",
+                "UWON",
+                "NVIDIA",
+                "NEAR"
             ],
-            "correctAnswer": "Smart contract platform"
+            "correctAnswer": "DD"
         },
         {
-            "question": "Which consensus mechanism does NEAR Protocol use?",
+            "question": "Hot wallet do we have mpc wallets facility?",
             "answers": [
-                "Proof of Work",
-                "Proof of Stake",
-                "Delegated Proof of Stake",
-                "Sharding"
+                "No",
+                "Yes"
+            
             ],
-            "correctAnswer": "Sharding"
+            "correctAnswer": "Yes"
         },
         {
             "question": "What is the native token of the NEAR Protocol called?",
@@ -51,14 +50,14 @@
             "correctAnswer": "Cross-chain interoperability"
         },
         {
-            "question": "Which blockchain does Hot Protocol primarily aim to connect?",
+            "question": "Which lanauge newly added to HOT Wallet",
             "answers": [
-                "Ethereum",
-                "Bitcoin",
-                "Polkadot",
-                "Binance Smart Chain"
+                "English",
+                "Russian",
+                "Japjapanese",
+                "Spanish"
             ],
-            "correctAnswer": "Ethereum"
+            "correctAnswer": "Russian"
         },
         {
             "question": "What is the native token of Hot Protocol called?",
@@ -71,14 +70,14 @@
             "correctAnswer": "HOT"
         },
         {
-            "question": "What problem does Hot Protocol aim to solve?",
+            "question": "What is the Hot wallet youtube channel name?",
             "answers": [
-                "Scalability issues",
-                "Interoperability between blockchains",
-                "High transaction fees",
-                "Energy consumption"
+                "HOT Protocol",
+                "Hot Youtube",
+                "Hot Token",
+                "Learn with HOT"
             ],
-            "correctAnswer": "Interoperability between blockchains"
+            "correctAnswer": "HOT Protocol"
         },
         {
             "question": "Which of the following is a key benefit of using NEAR Protocol?",
@@ -91,14 +90,14 @@
             "correctAnswer": "Low transaction fees"
         },
         {
-            "question": "Which programming languages are supported by NEAR Protocol for smart contract development?",
+            "question": "What is the recent added blockchain in HOT Wallet ",
             "answers": [
-                "Rust and AssemblyScript",
-                "Solidity and Vyper",
-                "Python and JavaScript",
-                "Java and Kotlin"
+                "Near",
+                "BNB",
+                "Solana",
+                "Base"
             ],
-            "correctAnswer": "Rust and AssemblyScript"
+            "correctAnswer": "BNB"
         }
     ],
     "Week2": [
@@ -111,198 +110,8 @@
                 "Proof of Elapsed Time"
             ],
             "correctAnswer": "Proof of Stake"
-        },
-        {
-            "question": "Which feature of NEAR Protocol helps in achieving scalability?",
-            "answers": [
-                "Sharding",
-                "Layer 2 solutions",
-                "Sidechains",
-                "Plasma"
-            ],
-            "correctAnswer": "Sharding"
-        },
-        {
-            "question": "What is a key benefit of using NEAR Protocol?",
-            "answers": [
-                "High transaction fees",
-                "High throughput",
-                "Centralization",
-                "Complex user experience"
-            ],
-            "correctAnswer": "High throughput"
-        },
-        {
-            "question": "Hot Protocol aims to facilitate interoperability between which of the following?",
-            "answers": [
-                "Cloud providers",
-                "Blockchain networks",
-                "Internet of Things devices",
-                "Artificial intelligence systems"
-            ],
-            "correctAnswer": "Blockchain networks"
-        },
-        {
-            "question": "NEAR Protocol's architecture is primarily designed for what?",
-            "answers": [
-                "Decentralized applications",
-                "Centralized databases",
-                "File storage",
-                "Networking"
-            ],
-            "correctAnswer": "Decentralized applications"
-        },
-        {
-            "question": "Hot Protocol is most known for enhancing what aspect of blockchain technology?",
-            "answers": [
-                "Scalability",
-                "Interoperability",
-                "Privacy",
-                "Governance"
-            ],
-            "correctAnswer": "Interoperability"
-        },
-        {
-            "question": "Which programming language is primarily used for writing smart contracts on NEAR Protocol?",
-            "answers": [
-                "Rust",
-                "Solidity",
-                "Python",
-                "Java"
-            ],
-            "correctAnswer": "Rust"
-        },
-        {
-            "question": "What is the main utility of the NEAR token within the NEAR Protocol?",
-            "answers": [
-                "Governance",
-                "Staking and transaction fees",
-                "Advertising",
-                "File storage"
-            ],
-            "correctAnswer": "Staking and transaction fees"
-        },
-        {
-            "question": "Hot Protocol aims to connect different blockchain ecosystems through what?",
-            "answers": [
-                "Smart contracts",
-                "Centralized exchanges",
-                "Bridges",
-                "Decentralized applications"
-            ],
-            "correctAnswer": "Bridges"
-        },
-        {
-            "question": "NEAR Protocol was developed to solve what major issue in blockchain technology?",
-            "answers": [
-                "Energy consumption",
-                "Scalability",
-                "Privacy",
-                "Consensus"
-            ],
-            "correctAnswer": "Scalability"
         }
-    ],
-    "Week3": [
-        {
-            "question": "What consensus algorithm does NEAR Protocol employ?",
-            "answers": [
-                "Proof of Stake",
-                "Proof of Work",
-                "Delegated Proof of Stake",
-                "Proof of Authority"
-            ],
-            "correctAnswer": "Proof of Stake"
-        },
-        {
-            "question": "Which feature is unique to NEAR Protocol's sharding technology?",
-            "answers": [
-                "Nightshade",
-                "Beacon Chain",
-                "Plasma",
-                "Sidechains"
-            ],
-            "correctAnswer": "Nightshade"
-        },
-        {
-            "question": "What is the main focus of Hot Protocol?",
-            "answers": [
-                "Interoperability",
-                "Scalability",
-                "Privacy",
-                "Security"
-            ],
-            "correctAnswer": "Interoperability"
-        },
-        {
-            "question": "Which of the following is a benefit of NEAR Protocol?",
-            "answers": [
-                "High transaction fees",
-                "Low throughput",
-                "Energy efficiency",
-                "Centralized control"
-            ],
-            "correctAnswer": "Energy efficiency"
-        },
-        {
-            "question": "What type of applications can be built on NEAR Protocol?",
-            "answers": [
-                "Decentralized applications",
-                "Centralized applications",
-                "Cloud applications",
-                "Mobile applications"
-            ],
-            "correctAnswer": "Decentralized applications"
-        },
-        {
-            "question": "Hot Protocol provides interoperability between which blockchain networks?",
-            "answers": [
-                "Bitcoin and Ethereum",
-                "Ethereum and Binance Smart Chain",
-                "Polkadot and Cardano",
-                "All major blockchain networks"
-            ],
-            "correctAnswer": "All major blockchain networks"
-        },
-        {
-            "question": "Which utility does the NEAR token provide within its ecosystem?",
-            "answers": [
-                "Advertising",
-                "Staking",
-                "File storage",
-                "Data processing"
-            ],
-            "correctAnswer": "Staking"
-        },
-        {
-            "question": "The architecture of NEAR Protocol is designed for what purpose?",
-            "answers": [
-                "File storage",
-                "Networking",
-                "Decentralized applications",
-                "Database management"
-            ],
-            "correctAnswer": "Decentralized applications"
-        },
-        {
-            "question": "What problem does Hot Protocol primarily aim to solve?",
-            "answers": [
-                "Energy consumption",
-                "High transaction fees",
-                "Interoperability",
-                "Governance"
-            ],
-            "correctAnswer": "Interoperability"
-        },
-        {
-            "question": "NEAR Protocol uses which mechanism for smart contract execution?",
-            "answers": [
-                "Ethereum Virtual Machine",
-                "WebAssembly (WASM)",
-                "Bitcoin Script",
-                "Turing Machine"
-            ],
-            "correctAnswer": "WebAssembly (WASM)"
-        }
+     
     ]
+
 }

@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   title: {
-    fontSize: 24,
+    fontSize: 50,
     fontWeight: 'bold',
     marginBottom: 20,
     flexDirection: 'row',
@@ -33,26 +33,26 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   tokenContainer: {
-    flex: 1,
+    flex: 2,
     alignItems: 'center',
   },
   tokenLabel: {
-    fontSize: 16,
+    fontSize: 32,
     fontWeight: 'bold',
     marginBottom: 10,
   },
   input: {
     width: '100%',
-    padding: 10,
-    borderWidth: 1,
+    padding: 30,
+    borderWidth: 4,
     borderColor: '#ccc',
     borderRadius: 5,
     textAlign: 'center',
   },
   hotValueContainer: {
     width: '100%',
-    padding: 10,
-    borderWidth: 1,
+    padding: 30,
+    borderWidth: 4,
     borderColor: '#ccc',
     borderRadius: 5,
     textAlign: 'center',
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   tokenValue: {
-    fontSize: 18,
+    fontSize: 40,
     fontWeight: 'bold',
   },
   reviewButton: {
@@ -85,6 +85,21 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  minimumPointsText: {
+    color: 'red',
+    marginTop: 40,
+    padding: 20,
+    borderWidth: 5,
+    borderColor: '#FFEA00',
+    borderRadius: 5,
+    textAlign: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 2,
+    backgroundColor: 'transparent',
+  },
   modalContainer: {
     flex: 1,
     justifyContent: 'center',
@@ -92,7 +107,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.5)',
   },
   modalContent: {
-    width: 300,
+    width: 600,
     padding: 20,
     backgroundColor: 'white',
     borderRadius: 10,
@@ -121,10 +136,48 @@ const styles = StyleSheet.create({
   },
   topRightContainer: {
     position: 'absolute',
-    top: 0,
-    right: 0,
-    justifyContent: 'center',
+    top: 10,
+    right: 10,
+  },
+  topLeftContainer: { 
+    position: 'absolute',
+    top: 10,
+    left: 10,
+  },
+  balanceContainer: { 
     alignItems: 'center',
+  },
+  balanceLabel: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  balanceValue: {
+    fontSize: 18,
+  },
+
+  topPoint:{       
+    backgroundColor: 'transparent',
+    padding: 15,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 180, 
+    height: 100, 
+  
+  },
+  topPointbalanceContainer: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  topPointbalance: {
+    fontSize: 24,
+    fontWeight: 'bold',
   },
 });
 

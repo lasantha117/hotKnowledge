@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Modal, Alert, Image } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Modal, Image } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPoints, setHotBalance } from '../../assets/redux/pointsSlice';
 import HotBalance from '../hotBalance/hotBalance';
@@ -7,7 +7,7 @@ import styles from './swapStyles';
 
 const SwapPage = () => {
   const images = {
-    DoodleC: require('../../assets/images/DoodleA.png'), 
+    DoodleC: require('../../assets/images/DoodleA.png'),
   };
 
   const totalPoints = useSelector((state) => state.points.totalPoints);
@@ -65,7 +65,12 @@ const SwapPage = () => {
       <View style={styles.topRightContainer}>
         <HotBalance balance={hotBalance} />
       </View>
-
+      <View style={styles.topLeftContainer}>
+        <View style={styles.topPoint}>
+          <Text style={styles.topPointbalanceContainer}>Points Balance</Text>
+          <Text style={styles.topPointbalance}>{totalPoints}</Text>
+        </View>
+      </View>
       <View style={styles.swapContainer}>
         <View style={styles.tokenContainer}>
           <Text style={styles.tokenLabel}>Points</Text>
@@ -87,6 +92,10 @@ const SwapPage = () => {
       <TouchableOpacity style={styles.reviewButton} onPress={handleConvert}>
         <Text style={styles.reviewButtonText}>Convert</Text>
       </TouchableOpacity>
+      
+      {inputPoints < minimumPointsRequired && (
+        <Text style={styles.minimumPointsText}>You should have minimum 200 Points</Text>
+      )}
 
       <Modal
         transparent={true}

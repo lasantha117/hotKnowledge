@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
         elevation: 5,
         alignItems: 'center',
         justifyContent: 'center',
-        width: 150, // Adjust the width as needed
-        height: 100, // Adjust the height as needed
+        width:  180, 
+        height: 100, 
     },
     title: {
       fontSize: 18,
