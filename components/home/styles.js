@@ -1,41 +1,43 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  backgroundImage: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
     height: '100%',
+    position: 'relative',
   },
-  overlay: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.2)', // Adjust the color and opacity as needed
-    zIndex: -1,
-  },
-  container: {
+ 
+  contentContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+
     padding: 20,
     borderRadius: 10,
+    zIndex: 2,
   },
-  logo: {
-    width: 100,
-    height: 100,
-    marginBottom: 20,
+  titleContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   title: {
-    fontSize: 36,
+    fontSize: 70,
     color: '#FFFFFF',
     fontWeight: 'bold',
-    marginBottom: 20,
+    textAlign: 'center',
+    textShadowColor: '#111', 
+    textShadowOffset: { width: 2, height: 2 }, 
+    textShadowRadius: 7, 
+    borderColor: '#FFFFFF', 
+
+    padding: 10, 
   },
   text: {
     fontSize: 24,
     color: '#FFFFFF',
     textAlign: 'center',
-    marginBottom: 20,
+    marginBottom: 50,
   },
 });
 

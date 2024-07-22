@@ -5,7 +5,7 @@ import styles from './dashboardStyles';
 import { RiArrowRightCircleLine, RiArrowLeftCircleLine } from '@remixicon/react';
 import HotBalance from '../hotBalance/hotBalance';
 import { useSelector } from 'react-redux';
-
+import DashboardParticlesComponent from '../../assets/particles/dashboardParticle';
 const Dashboard = () => {
   const username = 'Pradeep256.tg';
   const navigation = useNavigation();
@@ -33,7 +33,7 @@ const Dashboard = () => {
 
   return (
     <View style={styles.container}>
-      <Image source={images.DoodleC} style={styles.BackgroundImage} />
+        <DashboardParticlesComponent/> 
       <View style={styles.headerSpace} />
       <View style={styles.profileContainer}>
         <Image source={require('../../assets/images/logoWithBG.jpg')} style={styles.profilePic} />
