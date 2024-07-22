@@ -1,16 +1,22 @@
+import React, { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 
 const DashboardParticlesComponent = (props) => {
-  const [init, setInit] = useState(false);
+  const [particlesInitialized, setParticlesInitialized] = useState(false);
 
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
+    const initializeParticles = async () => {
+ 
+      await initParticlesEngine(async (engine) => {
+        await loadSlim(engine);
+      });
+      setParticlesInitialized(true);
+    };
+
+    initializeParticles();
+
+ 
   }, []);
 
   const particlesLoaded = (container) => {
@@ -87,11 +93,11 @@ const DashboardParticlesComponent = (props) => {
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
 
-  return init ? (
-    <Particles id={props.id} init={particlesLoaded} options={options} key={Date.now()} />
+  return particlesInitialized ? (
+    <Particles id={props.id} init={particlesLoaded} options={options} />
   ) : null;
 };
 

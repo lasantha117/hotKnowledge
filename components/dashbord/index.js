@@ -14,10 +14,6 @@ const Dashboard = () => {
   const totalPoints = useSelector((state) => state.points.totalPoints);
   const hotBalance = useSelector((state) => state.points.hotBalance);
 
-  const images = {
-    DoodleC: require('../../assets/images/DoodleC.png'), 
-  };
-
   const handleStartQuiz = () => {
     if (!completedWeeks.includes(currentWeek)) {
       navigation.navigate('Quiz', {

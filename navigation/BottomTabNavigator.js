@@ -11,6 +11,7 @@ import Friends from '../components/Friends/friends';
 import News from '../components/News';
 import Colors from '../constants/Colors';
 import styles from './bottomNavStyles';
+import withParticles from '../assets/particles/withParticles';
 
 const BottomTab = createBottomTabNavigator();
 
@@ -43,11 +44,11 @@ const BottomTabNavigator = () => {
         headerShown: false, // Ensure the header is not shown
       })}
     >
-      <BottomTab.Screen name="Home" component={Home} />
-      <BottomTab.Screen name="Dashboard" component={Dashboard} />
-      <BottomTab.Screen name="SwapPage" component={SwapPage} />
-      <BottomTab.Screen name="Friends" component={Friends} />
-      <BottomTab.Screen name="News" component={News} />
+      <BottomTab.Screen name="Home" component={withParticles(Home)} />
+      <BottomTab.Screen name="Dashboard" component={withParticles(Dashboard)} />
+      <BottomTab.Screen name="SwapPage" component={withParticles(SwapPage)} />
+      <BottomTab.Screen name="Friends" component={withParticles(Friends)} />
+      <BottomTab.Screen name="News" component={withParticles(News)} />
     </BottomTab.Navigator>
   );
 };
