@@ -35,8 +35,6 @@
 - **Daily Question:** Users will have the opportunity to answer one question daily.
 - **Hot Knowledge NFT:** Introduction of Hot Knowledge NFTs.
 
-## Learn and Earn
-Thank you for using Hot Knowledge. Stay informed and earn rewards!
 
 🔗 Follow us on X: [Hot Knowledge](https://x.com/hotknowledge_)
 🔗 Our Hot Knowledge Prototype Video is now live on YouTube! 🎉 Check it out here: [YouTube Video](https://youtu.be/WJtLyRCIbiw)
